@@ -8,9 +8,24 @@ using System.Threading.Tasks;
 
 namespace RestaurantSystem.DataAccessLayer.Concrete
 {
-    public class ProductManager:BaseManager<Product>, IProductService<Product>
+    public class ProductManager : BaseManager<Product>, IProductService<Product>
 
     {
+        Product[] products;
+        public void GetAll(string name)
+        {
+            throw new NotImplementedException();
+        }
 
+        public void GetByNameInRestaurant(string name)
+        {
+            foreach (var product in products)
+            {
+                if (name==product)
+                {
+
+                }
+            }
+        }
     }
 }

@@ -8,7 +8,23 @@ using System.Threading.Tasks;
 
 namespace RestaurantSystem.DataAccessLayer.Concrete
 {
-    public class RestaurantManager:BaseManager<Restaurant>,IRestaurantService<Restaurant>
+    public class RestaurantManager : BaseManager<Restaurant>, IRestaurantService<Restaurant>
     {
+        
+        public void GetAll()
+        {
+            
+        }
+
+        public void GetById(int id)
+        {
+            foreach (Restaurant restaurant in restaurants)
+            {
+                if (restaurant.Id==id)
+                {
+                    Console.WriteLine("");
+                }
+            }
+        }
     }
 }

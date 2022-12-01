@@ -9,24 +9,23 @@ namespace RestaurantSystem.DataAccessLayer.Concrete
 {
     public class BaseManager<T> :IBaseService<T>
     {
+        public static T[] values;
         public void Create(T entity)
         {
-            throw new NotImplementedException();
+            Array.Resize(ref values, values.Length + 1);
+            values[values.Length-1]=entity;
         }
 
-        public T[] GetAll()
-        {
-            throw new NotImplementedException();
-        }
+     
 
         public void Remove(int id)
         {
-            throw new NotImplementedException();
+            
         }
 
         public void Update(int id)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

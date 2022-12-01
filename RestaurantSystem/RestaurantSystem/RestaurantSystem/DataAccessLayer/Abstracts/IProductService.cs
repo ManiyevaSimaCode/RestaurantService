@@ -9,6 +9,8 @@ namespace RestaurantSystem.DataAccessLayer.Abstracts
     public interface IProductService<Product> : IBaseService<Product>
 
     {
+        void GetAll(string name);
+        void GetByNameInRestaurant(string name);
     }
     
 }
